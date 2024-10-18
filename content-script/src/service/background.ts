@@ -32,3 +32,11 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
    console.log(`Tab updated: ${tab.url}`);
  }
 });
+
+// 点击插件图标，新开一个内部页面
+chrome.action.onClicked.addListener((tab) => {
+ console.log('Action clicked', tab);
+  chrome.tabs.create({
+   url: '../../index.html'
+  })
+})

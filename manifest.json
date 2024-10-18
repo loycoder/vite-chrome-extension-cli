@@ -4,13 +4,13 @@
   "version": "1.0.0",
   "action": {
     "default_title": "Popup",
-    "default_popup": "index.html",
     "default_icon": "logo192.png"
   },
   "icons": {},
   "permissions": [
     "cookies",
     "storage",
+    "tabs",
     "http://*.com/",
     "https://*.com/"
   ],
