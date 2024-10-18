@@ -8,9 +8,22 @@
     "default_icon": "logo192.png"
   },
   "icons": {},
+  "permissions": [
+    "cookies",
+    "storage",
+    "http://*.com/",
+    "https://*.com/"
+  ],
+  "host_permissions": [
+    "http://*.com/*",
+    "https://*.com/*"
+  ],
+  "background": {
+    "service_worker": "content-script/src/service/background.ts"
+  },
   "content_scripts": [
     {
-      "matches": ["https://blank.org/*"],
+      "matches": ["<all_urls>"],
       "js": ["content-script/src/main.tsx"],
       "media": []
     }
